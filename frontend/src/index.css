@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .dark div {
+      @apply bg-gray-900 text-white;
+    }
+  }

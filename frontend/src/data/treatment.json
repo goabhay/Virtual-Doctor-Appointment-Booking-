@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "Dr. Ak Gupta",
+        "type":"Thiorid Treament",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":1
+    },
+    {
+        "name" : "Dr. Ak Gupta",
+
+        "type":"Diabetic Treament",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":2
+    },{
+        "name" : "Dr. Ak Gupta",
+        "type":"Hair Loss Treament",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":3
+    },{
+        "name" : "Dr. Ak Gupta",
+        "type":"Treament For The Skin",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":4
+    },{
+        "name" : "Dr. Ak Gupta",
+        "type":"Treament For The Back Pain",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":5
+    },
+    {
+        "name" : "Dr. Ak Gupta",
+        "type":"Treament For The Back Pain",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":6
+    },
+    {
+        "name" : "Dr. Ak Gupta",
+        "type":"Treament For The Back Pain",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":7
+    },
+    {
+        "name" : "Dr. Ak Gupta",
+        "type":"Treament For The Back Pain",
+        "desc":"lorem ispu hadfr sodfu fsdaoufow sdfjk dfi dfuwl",
+        "id":8
+    }
+
+]
+
