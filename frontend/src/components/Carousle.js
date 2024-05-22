@@ -1,4 +1,5 @@
 import React from "react";
+import dimg from "../";
 
 function Carousle() {
   return (
@@ -7,26 +8,26 @@ function Carousle() {
       <div className="carousel w-3/4 ">
         <div id="item1" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            className="w-full rounded-md"
+            src="https://i.pinimg.com/236x/a1/e0/1d/a1e01d037d45857d125b8656041f0146.jpg"
+            className="w-full h-96 rounded-md"
           />
         </div>
         <div id="item2" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-            className="w-full rounded-md"
+            src="https://i.pinimg.com/236x/6a/fa/17/6afa17c7e388b0401da3c9b457b870a2.jpg"
+            className="w-full h-96 rounded-md"
           />
         </div>
         <div id="item3" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg"
-            className="w-full rounded-md"
+            src="https://i.pinimg.com/236x/4a/90/a1/4a90a13c6dbfa6b9eff460bf38df117e.jpg"
+            className="w-full h-96 rounded-md"
           />
         </div>
         <div id="item4" className="carousel-item w-full">
           <img
-            src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-            className="w-full rounded-md"
+            src="https://i.pinimg.com/236x/a4/f4/aa/a4f4aaf47e1d674497bea9fbd4cb60d2.jpg"
+            className="w-full h-96 rounded-md"
           />
         </div>
       </div>

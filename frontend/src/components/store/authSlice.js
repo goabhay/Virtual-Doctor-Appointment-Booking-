@@ -16,9 +16,12 @@ const authSlice = createSlice({
   reducers: {
     login: (state, action) => {
       state.isLoggedIn = true;
+      // localStorage.setItem("login", true);
+      sessionStorage.setItem("login", "true");
     },
     logout: (state, action) => {
       localStorage.removeItem("userId");
+      sessionStorage.removeItem("login");
       state.isLoggedIn = false;
       state.role = "";
     },

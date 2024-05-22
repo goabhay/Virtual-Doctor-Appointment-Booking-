@@ -8,9 +8,26 @@ import { toast } from "react-hot-toast";
 import axios from "axios";
 
 function Navbar() {
-  const loginStatus = useSelector((state) => state.isLoggedIn);
+  // const loginStatus = useSelector((state) => state.isLoggedIn);
+  //const login = useSelector((state) => state.isLoggedIn);
+
+  const [loginStatus, setLoginStatus] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [sticky, setSticky] = useState(false);
+
+  // data stored in session will automatically vanishes as we close the window
+
+  // useEffect(() => {
+  //   const log = localStorage.getItem("login") || "false";
+  //   setLoginStatus(log === "true");
+  //   console.log(log);
+  // });
+
+  useEffect(() => {
+    const log = sessionStorage.getItem("login") || "false";
+    setLoginStatus(log === "true");
+    console.log(log);
+  });
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -102,9 +119,15 @@ function Navbar() {
             <li>
               <NavLink to="/home">Home</NavLink>
             </li>
-            <li>
-              <NavLink to="/">Virtual Doctor</NavLink>
-            </li>
+            {loginStatus === true ? (
+              <li>
+                <NavLink to="https://2894-106-51-8-242.ngrok-free.app">
+                  Virtual Doctor
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
             <li>
               <NavLink to="/contact">Contact</NavLink>
             </li>

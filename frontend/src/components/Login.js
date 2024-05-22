@@ -12,9 +12,10 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const log = useSelector((state) => state.isLoggedIn);
+  //const log = useSelector((state) => state.isLoggedIn);
 
-  console.log("loginStatus", log);
+  //console.log("loginStatus", log);
+
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -42,6 +43,7 @@ function Login() {
         toast.success("Login successful");
         dispatch(login());
         localStorage.setItem("userId", res.data.data._id);
+        localStorage.setItem("login", true);
         navigate("/home");
       } else {
         toast.error("some error");

@@ -7,6 +7,7 @@ import About from "./components/About";
 import Layout from "./components/Layout";
 import Blogs from "./components/Blogs";
 import Signup from "./components/Signup";
+import Testing from "./components/Testing.js";
 
 import { store } from "./components/store/store.js";
 import Login from "./components/Login.js";
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="blogs" element={<Blogs />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
+      <Route path="/testing" element={<Testing />} />
       <Route path="profile/:id" element={<ProfileLayout />}>
         {/* <Route path="userAppointment" element={UserAppointment} /> */}
         <Route path="patient" element={<PatientList />} />
