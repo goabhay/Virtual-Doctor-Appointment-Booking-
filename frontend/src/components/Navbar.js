@@ -129,14 +129,10 @@ function Navbar() {
               ""
             )}
             <li>
+              <NavLink to="/meetDoctors">Doctors</NavLink>
+            </li>
+            <li>
               <NavLink to="/contact">Contact</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blogs">Our Blogs</NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/about">About</NavLink>
             </li>
           </ul>
 

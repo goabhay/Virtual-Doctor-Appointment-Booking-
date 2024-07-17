@@ -4,11 +4,11 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import PatientList from "./PatientList";
 
-function Profile() {
+function DoctorProfile() {
   const [user, setUser] = useState({});
   const [showContent, setShowContent] = useState(false);
   const { id } = useParams();
-  const role = useSelector((state) => state.role);
+  console.log("docId = ", id);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,9 +16,6 @@ function Profile() {
         const response = await axios.get(
           `http://localhost:4000/user/getUser/${id}`,
           {
-            headers: {
-              "Content-Type": "application/json",
-            },
             withCredentials: true,
           }
         );
@@ -30,10 +27,6 @@ function Profile() {
     };
     fetchData();
   }, [id]);
-
-  const toggleContent = () => {
-    setShowContent((prevShowContent) => !prevShowContent);
-  };
 
   return (
     <div>
@@ -48,30 +41,12 @@ function Profile() {
         <div className="card-body">
           <h2 className="card-title font-bold text-4xl">{user.name}</h2>
           <p className="font-bold">Role: {user.role}</p>
-          {user.role === "doctor" && (
-            <>
-              <h1 className="font-bold text-2xl">
-                Speciality: {user.speciality}
-              </h1>
-              <button
-                className="btn rounded-md bg-slate-200"
-                onClick={toggleContent}
-              >
-                {showContent ? "Hide Patient Info" : "Show Patient Info"}
-              </button>
-            </>
-          )}
+
+          <h1 className="font-bold text-2xl">Speciality: {user.speciality}</h1>
         </div>
       </div>
-
-      {/* Second Component - Conditional Content */}
-      {showContent && (
-        <div className="m-auto w-1/2 mt-4 bg-slate-100 p-4 rounded-md shadow-md">
-          <PatientList />
-        </div>
-      )}
     </div>
   );
 }
 
-export default Profile;
+export default DoctorProfile;

@@ -7,6 +7,7 @@ module.exports.isLoggedIn = async function (req, res, next) {
   try {
     const token = req.cookies["login"];
     console.log(token);
+
     if (!token) {
       return res.status(401).json({ error: "Unauthorized: No token provided" });
     }

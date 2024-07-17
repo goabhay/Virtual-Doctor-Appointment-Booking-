@@ -7,7 +7,7 @@ import About from "./components/About";
 import Layout from "./components/Layout";
 import Blogs from "./components/Blogs";
 import Signup from "./components/Signup";
-import Testing from "./components/Testing.js";
+import DoctorProfile from "./components/DoctorProfile";
 
 import { store } from "./components/store/store.js";
 import Login from "./components/Login.js";
@@ -21,6 +21,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import MeetDoctors from "./components/MeetDoctors";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,10 +30,11 @@ const router = createBrowserRouter(
       <Route path="home" element={<App />} />
       <Route path="contact" element={<Contact />} />
       <Route path="about" element={<About />} />
+      <Route path="meetDoctors" element={<MeetDoctors />} />
       <Route path="blogs" element={<Blogs />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
-      <Route path="/testing" element={<Testing />} />
+      <Route path="profileDoctor/:id" element={<DoctorProfile />} />
       <Route path="profile/:id" element={<ProfileLayout />}>
         {/* <Route path="userAppointment" element={UserAppointment} /> */}
         <Route path="patient" element={<PatientList />} />
