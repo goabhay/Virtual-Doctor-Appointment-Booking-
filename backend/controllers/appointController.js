@@ -3,12 +3,13 @@ const mongoose = require("mongoose");
 
 module.exports.bookAppointment = async (req, res) => {
   try {
-    const { category, desc } = req.body;
+    const { category, desc, emergency } = req.body;
 
     const data = {
       patient: req.id,
       category,
       desc,
+      emergency,
     };
 
     const appoint = await appointment.create(data);

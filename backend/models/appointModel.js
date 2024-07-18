@@ -14,6 +14,7 @@ const appointmentSchema = mongoose.Schema(
     ],
     category: String,
     desc: String,
+    emergency: String,
     status: {
       type: String,
       enum: ["pending", "fulfilled"],

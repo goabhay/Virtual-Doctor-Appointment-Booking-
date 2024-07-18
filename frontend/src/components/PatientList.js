@@ -74,6 +74,10 @@ function PatientList() {
             <tr
               key={appointment._id}
               ref={(el) => (selectedRowRef.current[index] = el)}
+              style={{
+                backgroundColor:
+                  appointment.emergency == "emergency" ? "red" : "initial",
+              }}
             >
               <td className="border border-gray-300 py-2 px-4">{index + 1}</td>
               <td className="border border-gray-300 py-2 px-4">
